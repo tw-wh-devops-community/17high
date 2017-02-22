@@ -1,5 +1,6 @@
 package com.tw.wh.devops.domains;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -24,7 +25,9 @@ public class Activity implements Serializable {
     private String imageURL;
     private String status;
     private String location;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date startTime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date endTime;
     private String shortDescription;
     private String longDescription;

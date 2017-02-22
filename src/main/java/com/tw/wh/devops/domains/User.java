@@ -1,5 +1,6 @@
 package com.tw.wh.devops.domains;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -21,6 +22,7 @@ public class User implements Serializable {
     private String firstName;
     private String lastName;
     private String avatarURL;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date dob;
     private String gender;
 
