@@ -65,3 +65,17 @@ task buildDocker(type: Docker, dependsOn: build) {
         }
     }
 }
+
+jacocoTestCoverageVerification {
+	violationRules {
+		failOnViolation = true
+		rule {
+			enabled = false
+			limit {
+				minimum = 0.85
+			}
+		}
+	}
+}
+
+test.finalizedBy jacocoTestCoverageVerification

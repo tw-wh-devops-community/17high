@@ -1,0 +1,20 @@
+version: '2'
+services:
+  sonarqube:
+    image: "sonarqube:alpine"
+    ports:
+     - "9000:9000"
+     - "9092:9092"
+    environment:
+     - SONARQUBE_JDBC_USERNAME=sonarqube
+     - SONARQUBE_JDBC_PASSWORD=sonarqube
+     - SONARQUBE_JDBC_URL=jdbc:mysql://database:3306/sonar?useUnicode=true&characterEncoding=utf8
+    links:
+     - database
+  database:
+    image: "mysql:5.7"
+    environment:
+     - MYSQL_ROOT_PASSWORD=5ecret
+     - MYSQL_USER=sonarqube
+     - MYSQL_PASSWORD=sonarqube
+     - MYSQL_DATABASE=sonar
