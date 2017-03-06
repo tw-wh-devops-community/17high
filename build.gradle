@@ -79,3 +79,4 @@ jacocoTestCoverageVerification {
 }
 
 test.finalizedBy jacocoTestCoverageVerification
+check.finalizedBy sonarqube
