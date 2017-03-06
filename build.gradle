@@ -78,4 +78,5 @@ jacocoTestCoverageVerification {
 	}
 }
 
-test.finalizedBy jacocoTestCoverageVerification, sonarqube
+test.finalizedBy jacocoTestCoverageVerification
+test.finalizedBy "sonarqube"
