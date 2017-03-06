@@ -1,7 +1,7 @@
 version: '2'
 services:
   sonarqube:
-    image: "sonarqube:alpine"
+    build: .
     ports:
      - "9000:9000"
      - "9092:9092"
