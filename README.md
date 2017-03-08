@@ -18,7 +18,8 @@ You need not start mysql on local manually. bootRun will start a loacl mysql Doc
 you can run
 ```
 ./startMysql.sh
-``` to start a local Dcoker with Mysql 5.7 ( This step is already integrated to gradle bootRun)
+```
+to start a local Dcoker with Mysql 5.7 ( This step is already integrated to gradle bootRun)
 
 ## Run Sonarqube on local
 
